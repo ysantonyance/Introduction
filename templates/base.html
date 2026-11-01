@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Підтягуємо шаблони{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'icons8-ico-16.ico' %}" type="image/x-icon">
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'main' %}">Головна</a>
+        <a href="{% url 'second' %}">Друга сторінка</a>
+        <a href="{% url 'weather' %}">Погода в Одесі</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

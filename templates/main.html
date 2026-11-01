@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <p>Hello World!</p>
+    <p>Time: <span id='time'></span></p>
+    <p>Quote: <span id='quote'></span></p>
+
+    <script>
+        setInterval(() => time.innerText = new Date().toISOString().slice(11, 19))
+
+        const quotes = [
+            "Чем гуще лес if else if else",
+            "Даня дыня - скибиди добрыня",
+            "Вчера ты молод, сегодня стар, а завтра ты Милана стар",
+            "Слово не воробей, вака вака эй эй",
+            "Жизнь не малина - балериан капучина",
+            "Береза не трава, пепе шнейне ватафа"
+        ]
+
+        const randomIndex = Math.floor(Math.random() * quotes.length)
+        document.getElementById('quote').innerText = quotes[randomIndex]
+    </script>
+</body>
+
+</html>
